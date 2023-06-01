@@ -415,3 +415,22 @@ fields:
             required: true
             options:
               placeholder: $t:value
+
+  - field: files_divider
+    interface: presentation-divider
+    options:
+      icon: folder
+      title: 'CORS configuration'
+    special:
+      - alias
+      - no-data
+    width: full
+
+  - field: env_cors_enabled
+    interface: boolean
+    hidden: true
+    options:
+      title: 'Enable CORS'
+      placeholder: 'Enable CORS'
+      font: monospace
+    width: full

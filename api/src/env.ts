@@ -320,15 +320,13 @@ const typeMap: Record<string, string> = {
 	SERVER_SHUTDOWN_TIMEOUT: 'number',
 };
 
-let env: Record<string, any> = {
+let env: Record<string, any>;
+
+env = {
 	...defaults,
 	...process.env,
 	...processConfiguration(),
-};
-
-process.env = env;
-
-env = processValues(env);
+}
 
 export default env;
 
@@ -337,20 +335,13 @@ export default env;
  */
 export const getEnv = () => env;
 
+
 /**
- * When changes have been made during runtime, like in the CLI, we can refresh the env object with
- * the newly created variables
+ * Samll wrapper function to be able to change env value, used by dynamic-env
  */
-export function refreshEnv(): void {
-	env = {
-		...defaults,
-		...process.env,
-		...processConfiguration(),
-	};
-
-	process.env = env;
-
-	env = processValues(env);
+export function setEnv(newEnv : Record<string, any>){
+	env = newEnv;
+	processValues(env);
 }
 
 function processConfiguration() {
@@ -507,6 +498,8 @@ function processValues(env: Record<string, any>) {
 			env[key] = null;
 			continue;
 		}
+		console.log(key);
+		console.log(value);
 
 		if (
 			String(value).startsWith('0') === false &&
@@ -547,3 +540,6 @@ function tryJSON(value: any) {
 function toBoolean(value: any): boolean {
 	return value === 'true' || value === true || value === '1' || value === 1;
 }
+
+
+

@@ -1,0 +1,24 @@
+#please don't allow access to secret env variables
+table: directus_env_variables
+
+
+fields:
+  - field: cors_divider
+    interface: presentation-divider
+    options:
+      icon: folder
+      title: 'environment variables'
+    special:
+      - alias
+      - no-data
+    width: full
+
+  - field: cors_enabled
+    interface: input
+    options:
+      icon: key
+      title: $t:field_options.directus_settings.mapbox_key
+      placeholder: $t:field_options.directus_settings.mapbox_placeholder
+      iconLeft: vpn_key
+      font: monospace
+    width: full

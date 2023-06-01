@@ -44,6 +44,7 @@ import {
 } from './database/index.js';
 import emitter from './emitter.js';
 import env from './env.js';
+import './dynamic-env.js';//needed only once for the whole app;
 import { InvalidPayloadException } from './exceptions/invalid-payload.js';
 import { getExtensionManager } from './extensions.js';
 import { getFlowManager } from './flows.js';
@@ -148,9 +149,8 @@ export default async function createApp(): Promise<express.Application> {
 		next();
 	});
 
-	if (env['CORS_ENABLED'] === true) {
-		app.use(cors);
-	}
+	app.use(cors);
+	
 
 	app.use((req, res, next) => {
 		(
