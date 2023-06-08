@@ -962,7 +962,7 @@ fields:
     basemaps_raster: Raster
     basemaps_tile: Raster TileJSON
     basemaps_style: Mapbox Style
-    mapbox_key: Mapbox Access Token
+    mapbox_key: mapbox access token
     mapbox_placeholder: pk.eyJ1Ijo.....
     attribution: Attribution
     attribution_placeholder: '© OpenStreetMap contributors'
@@ -1049,7 +1049,7 @@ field_options:
         outside_text: Fit outside
     additional_transforms: Additional Transformations
     transforms_note: The Sharp method name and its arguments. See https://sharp.pixelplumbing.com/api-constructor for more information.
-    mapbox_key: Mapbox Access Token
+    mapbox_key: mapbox access token
     mapbox_placeholder: pk.eyJ1Ijo.....
     basemaps: Basemaps
     basemaps_name_placeholder: Enter the basemap name...

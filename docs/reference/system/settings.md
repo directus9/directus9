@@ -63,7 +63,7 @@ Folder for uploaded files. Does not affect existing files.
 Custom tiles to overriding the Mapbox defaults.
 
 `mapbox_key` **string**\
-[Mapbox Access Token](https://docs.mapbox.com/help/glossary/access-token).
+[mapbox access token](https://docs.mapbox.com/help/glossary/access-token).
 
 `module_bar` **array**\
 What modules are enabled/added globally.

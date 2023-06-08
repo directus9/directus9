@@ -6,11 +6,8 @@ import { getEnv } from '../env.js';
 let _corsMiddleware: RequestHandler ;
 
 function setCorsMiddlewareFromEnvVariable(){
-	console.log("setting cors*****************")
 	const env = getEnv();
-	console.log(env);
 	if (env['CORS_ENABLED'] === true) {
-		console.log("cors enabled")
 		_corsMiddleware = cors({
 			origin: env['CORS_ORIGIN'] || true,
 			methods: env['CORS_METHODS'] || 'GET,POST,PATCH,DELETE',

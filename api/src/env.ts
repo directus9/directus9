@@ -328,6 +328,8 @@ env = {
 	...processConfiguration(),
 }
 
+env = processValues(env);
+
 export default env;
 
 /**
@@ -341,7 +343,7 @@ export const getEnv = () => env;
  */
 export function setEnv(newEnv : Record<string, any>){
 	env = newEnv;
-	processValues(env);
+	env = processValues(env);
 }
 
 function processConfiguration() {
@@ -431,6 +433,8 @@ function processValues(env: Record<string, any>) {
 		// If key ends with '_FILE', try to get the value from the file defined in this variable
 		// and store it in the variable with the same name but without '_FILE' at the end
 		let newKey: string | undefined;
+		debugger;
+
 
 		if (key.length > 5 && key.endsWith('_FILE')) {
 			newKey = key.slice(0, -5);
@@ -498,8 +502,6 @@ function processValues(env: Record<string, any>) {
 			env[key] = null;
 			continue;
 		}
-		console.log(key);
-		console.log(value);
 
 		if (
 			String(value).startsWith('0') === false &&

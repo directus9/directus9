@@ -1114,7 +1114,7 @@ fields:
     basemaps_raster: Raster
     basemaps_tile: Raster TileJSON
     basemaps_style: Mapbox 風格
-    mapbox_key: Mapbox Access Token
+    mapbox_key: mapbox access token
     attribution: 致謝
     attribution_placeholder: '© OpenStreetMap'
     transforms_note: Sharp方式的名稱以及其欄位。請至 https://sharp.pixelplumbing.com/api-constructor 查詢更多資訊。
@@ -1202,7 +1202,7 @@ field_options:
         outside_text: 外部填滿
     additional_transforms: 其他轉換
     transforms_note: Sharp方式的名稱以及其欄位。請至 https://sharp.pixelplumbing.com/api-constructor 查詢更多資訊。
-    mapbox_key: Mapbox Access Token
+    mapbox_key: mapbox access token
     mapbox_placeholder: pk.eyJ1Ijo.....
     basemaps: 基礎地圖
     basemaps_name_placeholder: 編輯基礎地圖名稱...

@@ -131,7 +131,7 @@ To learn more, please see the API guide on [transformation presets](/reference/f
 
 ![How to Configure Mapping in Directus](https://cdn.directus.io/docs/v9/configuration/project-settings/project-settings-20220815/mapping-project-settings-20220815A.webp)
 
-- **Mapbox Access Token** — Create a [Mapbox Access Token](https://docs.mapbox.com/help/glossary/access-token) and enter
+- **mapbox access token** — Create a [mapbox access token](https://docs.mapbox.com/help/glossary/access-token) and enter
   it here to improve the platform's mapping experience.
 - **Basemaps** — Click **Create New** to set a custom tile configuration that overrides the Mapbox defaults.
   - **Name** — Sets a custom name to identify the basemap preset.

@@ -51,8 +51,6 @@ export class Emitter {
 	}
 
 	public emitAction(event: string | string[], meta: Record<string, any>, context: EventContext): void {
-		console.log("emitAction*****************************")
-		console.log(event);
 		
 		const events = Array.isArray(event) ? event : [event];
 

@@ -308,7 +308,7 @@ fields:
     interface: input
     options:
       icon: key
-      title: $t:field_options.directus_settings.mapbox_key
+      title: 'My strong title test'
       placeholder: $t:field_options.directus_settings.mapbox_placeholder
       iconLeft: vpn_key
       font: monospace
@@ -416,7 +416,7 @@ fields:
             options:
               placeholder: $t:value
 
-  - field: files_divider
+  - field: cors_divider
     interface: presentation-divider
     options:
       icon: folder
@@ -426,11 +426,68 @@ fields:
       - no-data
     width: full
 
-  - field: env_cors_enabled
-    interface: boolean
-    hidden: true
+  - field: cors_via_env
+    hidden: '!$env:CORS_ENABLED'
+    interface: presentation-notice
     options:
-      title: 'Enable CORS'
-      placeholder: 'Enable CORS'
+      text: 'CORS configuration via the settings are disabled when environment variables already deal with CORS'
+    special:
+      - alias
+      - no-data
+    width: full
+
+  - field: cors_enabled
+    hidden: '$env:CORS_ENABLED'
+    interface: boolean
+    special:
+      - cast-boolean
+    options:
+      label: 'Configure CORS'
+      font: monospace
+    display: boolean
+    width: full
+
+  - field: cors_origin
+    hidden: '$env:CORS_ENABLED'
+    interface: input
+    options:
+      title: $t:field_options.directus_settings.mapbox_key
+      placeholder: $t:field_options.directus_settings.mapbox_placeholder
+      iconLeft: vpn_key
       font: monospace
     width: full
+  
+  - field: env_cors_methods
+    hidden: '$env:CORS_ENABLED'
+    options:
+      iconRight: title
+      placeholder: $t:field_options.directus_settings.project_name_placeholder
+    width: half
+
+  - field: env_cors_allowed_headers
+    hidden: '$env:CORS_ENABLED'
+    options:
+      iconRight: title
+      placeholder: $t:field_options.directus_settings.project_name_placeholder
+    width: half
+
+  - field: env_cors_exposed_headers
+    hidden: '$env:CORS_ENABLED'
+    options:
+      iconRight: title
+      placeholder: $t:field_options.directus_settings.project_name_placeholder
+    width: half
+  
+  - field: env_cors_credentials
+    hidden: '$env:CORS_ENABLED'
+    options:
+      iconRight: title
+      placeholder: $t:field_options.directus_settings.project_name_placeholder
+    width: half
+
+  - field: env_cors_max_age
+    hidden: '$env:CORS_ENABLED'
+    options:
+      iconRight: title
+      placeholder: $t:field_options.directus_settings.project_name_placeholder
+    width: half

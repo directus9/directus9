@@ -12,8 +12,6 @@ export async function refreshEnv(): Promise<Record<string, any>> {
 	const newEnv = await processConfigurationFromDatabase(_initialEnv);
 	setEnv(newEnv);
 
-	console.log("env are updated**********************")
-
 	emitter.emitAction('env.update', newEnv, {
 		database: getDatabase(),
 		schema: null,
@@ -62,10 +60,6 @@ messenger.subscribe('envChanged', ()=>{
 	refreshEnv();
 })
 
-console.log("loading the dynamic part ******************************************")
-emitter.onAction('items.update', ()=>{
-	console.log("updating an item***********")
-})
 
 emitter.onAction('settings.update', envModificationActionHandler)
 emitter.onAction('settings.create', envModificationActionHandler)
