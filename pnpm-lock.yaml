@@ -814,8 +814,8 @@ importers:
         specifier: 7.0.6
         version: 7.0.6
       tinymce:
-        specifier: '>=6.7.1'
-        version: 6.7.1
+        specifier: 7.2.0
+        version: 7.2.0
       typescript:
         specifier: 5.0.4
         version: 5.0.4
@@ -7015,7 +7015,7 @@ packages:
     peerDependencies:
       vue: ^3.0.0
     dependencies:
-      tinymce: 7.6.1
+      tinymce: 7.2.0
       vue: 3.2.47
     dev: true
 
@@ -19108,12 +19108,8 @@ packages:
     resolution: {integrity: sha512-KQQR9yN7R5+OSwaK0XQoj22pwHoTlgYqmUscPYoknOoWCWfj/5/ABTMRi69FrKU5ffPVh5QcFikpWJI/P1ocHA==}
     dev: true
 
-  /tinymce@6.7.1:
-    resolution: {integrity: sha512-SIGJgWk2d/X59VbO+i81QfNx2EP1P5t+sza2/1So3OLGtmMBhEJMag7sN/Mo8sq4s0niwb65Z51yLju32jP11g==}
-    dev: true
-
-  /tinymce@7.6.1:
-    resolution: {integrity: sha512-5cHhaAoyyTHfAVTInNfoSp0KkUHmeVUbGSu37QKQbOFIPqxYPhqBiaLm1WVLgoNBYOHRProVc3xzxnNTeWHyoQ==}
+  /tinymce@7.2.0:
+    resolution: {integrity: sha512-R460NlE4REIFuLcZd9mpHK8zRsHdOueLV2m6Wsn0JHfGhDWMcfB1IqUX2QGrSbJga93ygJbJbNMwb2sakFlE/g==}
     dev: true
 
   /tinypool@0.4.0:
